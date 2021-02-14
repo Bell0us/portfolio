@@ -1,2 +1,2 @@
-# portfolio
-Personal portfolio of one passionate Web developer / designer
+# Jáchym Tinavský
+Personal portfolio of one passionate Web developer / designer.
