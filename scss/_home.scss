@@ -1,0 +1,108 @@
+@import 'mixins';
+@import 'variables';
+
+#home {
+    background-image: url(../img/home-background.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom; 
+    
+    overflow: hidden;
+
+    height: 100vh;
+
+    padding: 0 em(30);
+
+    display: grid;
+    grid-template-rows: 1.7fr 2.2fr 2fr;    
+    grid-template-areas: 
+        "about-me"
+        "heading"
+        "scroll";
+
+    .content {
+        grid-area: about-me;
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-end;
+
+        margin-bottom: em(40);
+
+        .name {
+            color: $main-font-color;
+
+            font-size: em(22);
+            font-weight: $regular;
+
+            margin-bottom: em(2,22);
+        }
+
+        .my-job {
+            color: $sub-font-color;
+
+            font-size: em(13);
+            font-weight: $light;
+        }
+    }
+    
+    .home-heading {
+        grid-area: heading;
+
+        .purple-line {
+            width: em(150);
+            height: em(3);
+
+            background-color: $main-purple;
+
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .heading {
+            margin-top: em(20);
+            
+            font-size: em(35);
+        }
+    }
+
+    .scroll-action {
+        grid-area: scroll;        
+
+        .scroll-text {
+            color: $contrast-font-color;
+
+            font-size: em(18);
+            font-weight: $light;
+
+            transform: rotate(90deg);
+
+            margin-top: em(50);
+        }
+
+        .white-line {
+            width: em(1.5);
+            height: em(90);
+
+            background-color: white;
+
+            margin-top: em(50);
+
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .scroll-circle {
+            animation: circleScrollAnimMobile 1.3s infinite alternate-reverse;
+        }
+    }
+}
+
+@keyframes circleScrollAnimMobile {
+    to {
+        transform: translateY(20px);
+    }
+}
+

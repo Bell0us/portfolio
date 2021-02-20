@@ -1,5 +1,17 @@
+@import 'menu';
+@import 'home';
+
+@import 'mixins';
+@import 'variables';
+
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: o;
+    padding: 0;
+}
+
+body {    
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
 }

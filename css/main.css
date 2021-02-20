@@ -1,7 +1,181 @@
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  position: fixed;
+  width: 100%;
+  height: 10vh;
+  padding: 0 1.875em;
+}
+
+nav .menu-mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 40%;
+}
+
+nav .menu-mobile .hire-button {
+  display: inline-block;
+  font-size: 0.75em;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.08333em;
+  color: #ffffff;
+  background-color: #0054FF;
+  padding: 0.41667em 0.83333em;
+  border-radius: 0.41667em;
+}
+
+nav .menu-mobile .menu-badge {
+  cursor: pointer;
+}
+
+nav .menu {
+  display: none;
+}
+
+#home {
+  background-image: url(../img/home-background.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  overflow: hidden;
+  height: 100vh;
+  padding: 0 1.875em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1.7fr 2.2fr 2fr;
+      grid-template-rows: 1.7fr 2.2fr 2fr;
+      grid-template-areas: "about-me" "heading" "scroll";
+}
+
+#home .content {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: about-me;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 2.5em;
+}
+
+#home .content .name {
+  color: #202020;
+  font-size: 1.375em;
+  font-weight: 400;
+  margin-bottom: 0.09091em;
+}
+
+#home .content .my-job {
+  color: #333333;
+  font-size: 0.8125em;
+  font-weight: 300;
+}
+
+#home .home-heading {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: heading;
+}
+
+#home .home-heading .purple-line {
+  width: 9.375em;
+  height: 0.1875em;
+  background-color: #6A36FE;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#home .home-heading .heading {
+  margin-top: 1.25em;
+  font-size: 2.1875em;
+}
+
+#home .scroll-action {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: scroll;
+}
+
+#home .scroll-action .scroll-text {
+  color: #ffffff;
+  font-size: 1.125em;
+  font-weight: 300;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  margin-top: 3.125em;
+}
+
+#home .scroll-action .white-line {
+  width: 0.09375em;
+  height: 5.625em;
+  background-color: white;
+  margin-top: 3.125em;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#home .scroll-action .scroll-circle {
+  animation: circleScrollAnimMobile 1.3s infinite alternate-reverse;
+}
+
+@-webkit-keyframes circleScrollAnimMobile {
+  to {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+}
+
+@keyframes circleScrollAnimMobile {
+  to {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
-  padding: o;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */

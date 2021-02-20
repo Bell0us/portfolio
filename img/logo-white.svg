@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 822 807" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(0.192131,0,0,0.192131,33.2512,27.7523)">
+        <g transform="matrix(4.16666,0,0,4.16666,-4328.52,-3473.15)">
+            <rect x="1050.25" y="849.996" width="917.345" height="917.345" style="fill:white;fill-opacity:0;stroke:white;stroke-width:46.7px;"/>
+        </g>
+        <g transform="matrix(3.28775,-3.52696,3.52696,3.28775,-7907.59,4199.51)">
+            <g transform="matrix(10.9932,11.793,-12.1271,11.3046,1338.74,1205.18)">
+                <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:50px;fill:white;">J</text>
+            </g>
+            <g transform="matrix(11.3046,12.1271,-12.1271,11.3046,1370.98,1231.13)">
+                <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:50px;fill:rgb(0,84,255);">J</text>
+            </g>
+        </g>
+    </g>
+</svg>
