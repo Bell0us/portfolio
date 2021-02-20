@@ -2,10 +2,10 @@
 @import 'variables';
 
 #home {
-    background-image: url(../img/home-background.svg);
-    background-size: contain;
+    background-image: url(../img/home-bg.svg);
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center bottom; 
+    background-position: center center; 
     
     overflow: hidden;
 
@@ -62,6 +62,8 @@
 
         .heading {
             margin-top: em(20);
+
+            color: $main-font-color;
             
             font-size: em(35);
         }

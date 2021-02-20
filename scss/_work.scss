@@ -1,0 +1,57 @@
+@import 'mixins';
+@import 'variables';
+
+#work {
+    background-image: url(../img/work-bg.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    height: 100vh;    
+
+    overflow: hidden;
+
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-areas: 
+        "work-heading"
+        "site-showcase"
+        "show-more";
+    
+    .work-heading {
+        font-size: em(35);
+        align-self: center;
+
+        color: $main-font-color;
+        
+        grid-area: work-heading;
+
+        margin-top: em(100,35);
+    }
+
+    .site-showcase {
+        grid-area: site-showcase;           
+        
+        .laptop {            
+            margin-left: em(-5);
+            margin-top: em(-70);
+        }
+    }
+
+    .show-more-button {  
+        font-size: em(17);
+        font-weight: $bold;
+        
+        grid-area: show-more;
+        justify-self: center;
+        align-self: center;   
+        
+        margin-bottom: em(80,17);
+        padding: em(15,17) em(20,17);
+
+        background-color: $main-blue;
+        color: $contrast-font-color;
+
+        border-radius: em(5,17);        
+    }
+}

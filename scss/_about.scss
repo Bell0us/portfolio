@@ -1,0 +1,243 @@
+@import 'mixins';
+@import 'variables';
+
+#about {
+    /* background-image: url(../img/about-bg.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; */
+
+    height: 100vh;    
+
+    overflow: hidden;
+
+    display: grid;
+    grid-template-rows: 1.5fr .5fr 3fr;
+    grid-template-areas: 
+        "about-heading"
+        "about-button"
+        "about-cards"; 
+        
+    .about-heading {
+        font-size: em(22);
+
+        color: $main-font-color;
+
+        grid-area: about-heading;
+        align-self: end;
+
+        margin-bottom: em(30,22);
+    }
+
+    .learn-more-button {
+        font-size: em(17);
+        font-weight: $bold;
+
+        grid-area: about-button;
+        justify-self: center;
+        align-self: center;
+        
+        background-color: $main-blue;
+        color: $contrast-font-color;
+
+        border-radius: em(5);
+
+        padding: em(10,17) em(20,17);
+    }
+
+    .about-cards-holder {
+       grid-area: about-cards; 
+       position: relative;
+    }
+
+    .UI-card {
+        width: 80%;
+        height: 380px;
+
+        text-align: center;
+
+        background-color: $light-purple;
+
+        border-radius: em(5);
+
+        position: absolute;
+        bottom: em(-50);
+        left: 50%;
+
+        z-index: 0;
+
+        transform: translateX(-50%);
+
+        .UI {
+            font-size: em(20);
+            font-weight: $bold;
+            
+            display: inline-block;
+
+            color: $main-font-color;
+            
+            margin: em(50,20) 0 em(60,20) 0;
+            padding: 0 em(20,20) em(20,20) em(20,20);
+
+            border-bottom: 2px solid white;
+        }
+
+        .UI-desc {
+            font-size: em(16);
+            font-weight: $regular;
+
+            line-height: em(25,16);
+
+            color: $sub-font-color;
+
+            padding: 0 em(40,16);
+        }
+    }
+
+    .frontend-card {
+        width: 80%;
+        height: 380px;
+
+        text-align: center;
+
+        background-color: $light-purple;
+
+        border-radius: em(5);
+
+        position: absolute;
+        bottom: em(-50);
+        left: 50%;
+
+        z-index: -1;
+
+        transform: translateX(-50%);
+
+        .frontend {
+            font-size: em(20);
+            font-weight: $bold;
+            
+            display: inline-block;
+
+            color: $main-font-color;
+            
+            margin: em(50,20) 0 em(60,20) 0;
+            padding: 0 em(20,20) em(20,20) em(20,20);
+
+            border-bottom: 2px solid white;
+        }
+
+        .frontend-desc {
+            font-size: em(16);
+            font-weight: $regular;
+
+            line-height: em(25,16);
+
+            color: $sub-font-color;
+
+            padding: 0 em(40,16);
+        }
+    }
+
+    .logo-card {
+        width: 80%;
+        height: 380px;
+
+        text-align: center;
+
+        background-color: $light-purple;
+
+        border-radius: em(5);
+
+        position: absolute;
+        bottom: em(-50);
+        left: 50%;
+
+        z-index: -1;
+
+        transform: translateX(-50%);
+
+        .logo {
+            font-size: em(20);
+            font-weight: $bold;
+            
+            display: inline-block;
+
+            color: $main-font-color;
+            
+            margin: em(50,20) 0 em(60,20) 0;
+            padding: 0 em(20,20) em(20,20) em(20,20);
+
+            border-bottom: 2px solid white;
+        }
+
+        .logo-desc {
+            font-size: em(16);
+            font-weight: $regular;
+
+            line-height: em(25,16);
+
+            color: $sub-font-color;
+
+            padding: 0 em(40,16);
+        }
+    }
+
+    .overlap-background {        
+        z-index: 1;
+    }
+}
+
+.switchers {  
+    display: flex;
+    flex-flow: row nowrap;   
+    
+    z-index: 2;
+    
+    position: absolute;
+
+    top: 90%;
+    left: 40%;
+
+    transform: translate(-40% -90%);
+
+    .UI-switch {
+        background-color: white;
+
+        border-radius: 50%;
+        border: 3px solid white;
+
+        width: em(18);
+        height: em(18);
+
+        margin-right: em(8);
+
+    }
+    
+    .frontend-switch {
+        background-color: white;
+
+        border-radius: 50%;
+        border: 3px solid white;
+
+        width: em(18);
+        height: em(18);        
+
+        margin-right: em(8);
+    }
+
+    .logo-switch {
+        background-color: white;
+
+        border-radius: 50%;
+        border: 3px solid white;
+
+        width: em(18);
+        height: em(18);        
+
+        margin-right: em(8);
+    }
+
+    .switch-active {
+        background-color: $main-purple;
+    }
+}

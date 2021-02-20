@@ -1,5 +1,7 @@
 @import 'menu';
 @import 'home';
+@import 'work';
+@import 'about';
 
 @import 'mixins';
 @import 'variables';
@@ -14,4 +16,12 @@ body {
     background-color: white;
     font-family: 'Poppins', sans-serif;
     text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
 }
