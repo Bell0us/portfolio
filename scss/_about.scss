@@ -1,7 +1,8 @@
 @import 'mixins';
 @import 'variables';
 
-#about {    
+#about {
+    
     height: 100vh;    
 
     overflow: hidden;
@@ -179,21 +180,27 @@
 
     .overlap-background {        
         z-index: 1;
+
+        position: relative;
+        top: 10px;
     }
 }
 
 .switchers {  
     display: flex;
-    flex-flow: row nowrap;   
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 20px;
     
     z-index: 2;
+
+    width: 100%;
     
     position: absolute;
 
-    top: 90%;
-    left: 40%;
+    top: 90%;    
 
-    transform: translate(-40% -90%);
+    transform: translate(0% -90%);
 
     .UI-switch {
         background-color: white;
@@ -201,11 +208,8 @@
         border-radius: 50%;
         border: 3px solid white;
 
-        width: em(18);
-        height: em(18);
-
-        margin-right: em(8);
-
+        width: em(22);
+        height: em(22);
     }
     
     .frontend-switch {
@@ -214,10 +218,8 @@
         border-radius: 50%;
         border: 3px solid white;
 
-        width: em(18);
-        height: em(18);        
-
-        margin-right: em(8);
+        width: em(22);
+        height: em(22);
     }
 
     .logo-switch {
@@ -226,10 +228,8 @@
         border-radius: 50%;
         border: 3px solid white;
 
-        width: em(18);
-        height: em(18);        
-
-        margin-right: em(8);
+        width: em(22);
+        height: em(22);
     }
 
     .switch-active {
