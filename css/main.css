@@ -280,10 +280,6 @@ nav .menu-mobile .menu-badge {
 }
 
 #about {
-  /* background-image: url(../img/about-bg.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover; */
   height: 100vh;
   overflow: hidden;
   display: -ms-grid;
