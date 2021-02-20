@@ -1,11 +1,12 @@
 @import 'mixins';
 @import 'variables';
 
-#about {
-    
+#about {    
     height: 100vh;    
 
     overflow: hidden;
+
+    position: relative;
 
     display: grid;
     grid-template-rows: 1.5fr .5fr 3fr;
@@ -20,7 +21,9 @@
         color: $main-font-color;
 
         grid-area: about-heading;
-        align-self: end;
+
+        position: absolute;
+        top: 20%;
 
         margin-bottom: em(30,22);
     }
@@ -36,14 +39,19 @@
         background-color: $main-blue;
         color: $contrast-font-color;
 
+        position: relative;
+        top: 35%;
+
         border-radius: em(5);
 
         padding: em(10,17) em(20,17);
     }
 
     .about-cards-holder {
-       grid-area: about-cards; 
+       grid-area: about-cards;
+
        position: relative;
+       top: 87%;
     }
 
     .UI-card {
@@ -182,7 +190,7 @@
         z-index: 1;
 
         position: relative;
-        top: 10px;
+        top: 87%;
     }
 }
 
@@ -196,11 +204,9 @@
 
     width: 100%;
     
-    position: absolute;
-
-    top: 90%;    
-
-    transform: translate(0% -90%);
+    position: relative;
+    top: 45%;
+    transform: translateY(-45%);
 
     .UI-switch {
         background-color: white;

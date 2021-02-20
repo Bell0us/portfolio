@@ -7,7 +7,9 @@
     background-position: center center;
     background-size: cover;
 
-    height: 100vh;    
+    height: 100vh;  
+    
+    position: relative;
 
     overflow: hidden;
 
@@ -19,22 +21,30 @@
         "show-more";
     
     .work-heading {
+        grid-area: work-heading;
+
         font-size: em(35);
         align-self: center;
 
         color: $main-font-color;
-        
-        grid-area: work-heading;
 
-        margin-top: em(100,35);
+        position: absolute;
+
+        top: 25%;
+        transform: translateY(-25%);
     }
 
     .site-showcase {
-        grid-area: site-showcase;           
+        grid-area: site-showcase;  
+        
+        display: flex;
+        place-content: center;
         
         .laptop {            
-            margin-left: em(-5);
-            margin-top: em(-70);
+            position: absolute;
+
+            top: 62%;
+            transform: translateY(-62%);
         }
     }
 
@@ -52,6 +62,11 @@
         background-color: $main-blue;
         color: $contrast-font-color;
 
-        border-radius: em(5,17);        
+        border-radius: em(5,17);
+
+        position: relative;
+
+        top: 82%;
+       transform: translateY(-82%);
     }
 }

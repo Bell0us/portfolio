@@ -84,13 +84,13 @@ var tl = gsap.timeline({
 
 tl.from('.home-heading h1', {
         opacity: 0,
-        top: -50,
+        top: 200,
         duration: 1.5,
         ease: "power2.inOut"
     })
     .from('.content', {
         opacity: 0,
-        bottom: -50,
+        bottom: 500,
         duration: 1.5,
         ease: "power2.inOut",
     }, '-=1.2')
@@ -100,3 +100,10 @@ tl.from('.home-heading h1', {
         bottom: -20,
         ease: "power2.inOut"
     });
+
+// Fullpage scripts
+
+new fullpage('#fullpage', {
+    autoScrolling: true,
+    navigation: true,
+});
