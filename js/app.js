@@ -76,26 +76,27 @@ logoSwitch.addEventListener('click', () => {
 
 // GSAP 3 animations
 
+// Home page
 
 var tl = gsap.timeline({
     delay: 0
 });
 
-
 tl.from('.home-heading h1', {
-    opacity: 0,
-    top: -50,
-    duration: 1,
-});
-
-tl.from('.content', {
-    opacity: 0,
-    bottom: -50,
-    duration: 1,
-});
-
-tl.from('.scroll-action', {
-    opacity: 0,
-    duration: 1,
-    bottom: -20
-});
+        opacity: 0,
+        top: -50,
+        duration: 1.5,
+        ease: "power2.inOut"
+    })
+    .from('.content', {
+        opacity: 0,
+        bottom: -50,
+        duration: 1.5,
+        ease: "power2.inOut",
+    }, '-=1.2')
+    .from('.scroll-action', {
+        opacity: 0,
+        duration: 1,
+        bottom: -20,
+        ease: "power2.inOut"
+    });
