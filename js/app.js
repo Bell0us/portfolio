@@ -1,3 +1,5 @@
+'use strict';
+
 // Mobile menu pop up
 
 const menuBadge = document.querySelector('.menu-badge');
@@ -71,3 +73,29 @@ logoSwitch.addEventListener('click', () => {
     frontEndCard.style.zIndex = "0";
     logoCard.style.zIndex = "1";
 })
+
+// GSAP 3 animations
+
+
+var tl = gsap.timeline({
+    delay: 0
+});
+
+
+tl.from('.home-heading h1', {
+    opacity: 0,
+    top: -50,
+    duration: 1,
+});
+
+tl.from('.content', {
+    opacity: 0,
+    bottom: -50,
+    duration: 1,
+});
+
+tl.from('.scroll-action', {
+    opacity: 0,
+    duration: 1,
+    bottom: -20
+});

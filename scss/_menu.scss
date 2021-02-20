@@ -16,6 +16,8 @@ nav {
 
     background-color: rgba(white, .7);
 
+    z-index: 10;
+
     .menu-mobile {
         display: flex;
         flex-flow: row nowrap;

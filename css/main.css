@@ -17,6 +17,7 @@ nav {
   height: 10vh;
   padding: 0 1.875em;
   background-color: rgba(255, 255, 255, 0.7);
+  z-index: 10;
 }
 
 nav .menu-mobile {
@@ -143,6 +144,7 @@ nav .menu-mobile .menu-badge {
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin-bottom: 2.5em;
+  position: relative;
 }
 
 #home .content .name {
@@ -178,12 +180,14 @@ nav .menu-mobile .menu-badge {
   margin-top: 1.25em;
   color: #202020;
   font-size: 2.1875em;
+  position: relative;
 }
 
 #home .scroll-action {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: scroll;
+  position: relative;
 }
 
 #home .scroll-action .scroll-text {
