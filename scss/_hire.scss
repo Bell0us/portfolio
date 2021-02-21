@@ -1,0 +1,216 @@
+@import 'mixins';
+@import 'variables';
+
+#hire {
+    background-image: url(../img/hire-bg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+
+    position: relative;
+    
+    overflow: hidden;
+
+    height: 100vh;
+
+    padding: 0;
+
+    display: grid;
+    grid-template-rows: 2fr 2fr .2fr;    
+    grid-template-areas: 
+        "hire-heading"
+        "hire-form"
+        "footer";
+
+    .hire-heading {
+        grid-area: hire-heading;
+
+        font-size: em(22);
+        text-align: left;
+
+        max-width: 70%;      
+
+        color: $main-font-color;
+
+        position: absolute;
+
+        top: 25%;
+        left: 15%;
+    }
+
+    .hire-form {
+        grid-area: hire-form;
+
+        background-color: rgba($light-purple, .95);
+
+        border-radius: em(6);
+
+        padding: em(10) 0 em(60) 0;
+        margin: 0 em(30) em(0) em(30);
+
+        text-align: center;
+
+        position: relative;
+        top: 45%;        
+
+        .contact-heading {
+            color: $contrast-font-color;
+
+        }
+
+        ::placeholder {
+            font-size: em(16);
+            font-weight: $bold;
+
+            color: $contrast-font-color;
+        }
+
+        #name {
+            font-size: em(12);
+            
+
+            width: 90%;
+            background-color: $imput-color;
+
+            color: $contrast-font-color;
+            
+            border: none;
+            border-radius: em(6);
+
+            padding: em(10) 0 em(10) em(20);
+            margin-bottom: em(15);
+
+            &:focus {
+                outline-color: white;
+                outline-width: em(2);
+            }
+        }
+
+        #email {
+            font-size: em(12);
+            
+
+            width: 90%;
+            background-color: $imput-color;
+
+            color: $contrast-font-color;
+            
+            border: none;
+            border-radius: em(6);
+
+            padding: em(10) 0 em(10) em(20);
+            margin-bottom: em(15);
+
+            &:focus {
+                outline-color: white;
+                outline-width: em(2);
+            }
+        }
+
+        #subject {
+            font-size: em(12);
+            
+
+            width: 90%;
+            background-color: $imput-color;
+
+            color: $contrast-font-color;
+            
+            border: none;
+            border-radius: em(6);
+
+            padding: em(10) 0 em(10) em(20);
+            margin-bottom: em(15);
+
+            &:focus {
+                outline-color: white;
+                outline-width: em(2);
+            }
+        }
+
+        #message {
+            font-size: em(12);
+            
+
+            width: 90%;
+            background-color: $imput-color;
+
+            color: $contrast-font-color;
+            
+            border: none;
+            border-radius: em(6);
+
+            padding: em(10) 0 em(10) em(20);
+            margin-bottom: em(15);
+
+            &:focus {
+                outline-color: white;
+                outline-width: em(2);
+            }
+        }
+
+        .send {
+            background-color: $light-purple;
+
+            border: 3px solid white;
+            border-radius: em(6);
+
+            color: $contrast-font-color;
+            font-size: em(16);
+            font-weight: $bold;
+
+            padding: em(6,16) em(20,16);
+
+            &:focus,
+            &:hover {
+                background-color: $main-purple;
+                outline: none;
+            }
+        }
+    }
+
+    footer {
+        grid-area: footer;
+        align-self: end;
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+        height: 4vh;
+
+        z-index: 10;
+
+        background-color: $main-blue;
+        
+        position: absolute;
+        bottom: 20.6%;        
+
+        .rights {
+            margin-left: em(20,10);
+
+            color: $contrast-font-color;
+            font-size: em(10);
+
+            img {
+                width: em(12);
+                height: auto;
+            }
+        }
+
+        .socials {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: em(15);
+
+            margin-right: em(20);
+
+            img {
+                width: em(12);
+                height: auto;
+            }
+        }
+    }
+}

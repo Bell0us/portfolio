@@ -74,36 +74,120 @@ logoSwitch.addEventListener('click', () => {
     logoCard.style.zIndex = "1";
 })
 
-// GSAP 3 animations
+// Fullpage scripts + GSAP 3
 
-// Home page
 
 var tl = gsap.timeline({
     delay: 0
 });
 
+// home page load anim
 tl.from('.home-heading h1', {
         opacity: 0,
-        top: 200,
+        top: "30%",
         duration: 1.5,
         ease: "power2.inOut"
     })
     .from('.content', {
         opacity: 0,
-        bottom: 500,
+        bottom: "60%",
         duration: 1.5,
         ease: "power2.inOut",
     }, '-=1.2')
     .from('.scroll-action', {
         opacity: 0,
         duration: 1,
-        bottom: -20,
-        ease: "power2.inOut"
-    });
+        bottom: "10%",
+        ease: "power1.inOut"
+    }, "-=0.5");
 
-// Fullpage scripts
 
 new fullpage('#fullpage', {
     autoScrolling: true,
     navigation: true,
+    onLeave: (origin, destination, direction) => {
+        const section = destination.item;
+
+        // Home page
+        if (destination.index === 0) {
+
+            tl.from('.home-heading h1', {
+                    opacity: 0,
+                    top: "30%",
+                    duration: 1.5,
+                    ease: "power2.inOut"
+                })
+                .from('.content', {
+                    opacity: 0,
+                    top: "30%",
+                    duration: 1.5,
+                    ease: "power1.inOut",
+                }, '-=1.2')
+                .from('.scroll-action', {
+                    opacity: 0,
+                    duration: 1,
+                    top: "80%",
+                    ease: "power3.inOut"
+                });
+        };
+
+        // Work page
+        if (destination.index === 1) {
+            tl.from('.work-heading', {
+                    opacity: 0,
+                    top: "40%",
+                    duration: 1.5,
+                    ease: "power2.inOut"
+                })
+                .from('.show-more-button', {
+                    opacity: 0,
+                    duration: .5,
+                    ease: "power1.inOut"
+                })
+        };
+
+        // About page
+        if (destination.index === 2) {
+            tl.from('.about-heading', {
+                    opacity: 0,
+                    left: "20%",
+                    duration: 2,
+                    ease: "power3.inOut"
+                })
+                .from('.learn-more-button', {
+                    opacity: 0,
+                    right: "20%",
+                    duration: 2,
+                    ease: "power3.inOut"
+                }, "-=2")
+                .from('.about-cards-holder', {
+                    opacity: 0,
+                    top: "150%",
+                    duration: 2,
+                    ease: "power3.inOut"
+                }, "-=1.5")
+        }
+
+        // Hire page
+        if (destination.index === 3) {
+            tl.from('.hire-heading', {
+                    opacity: 0,
+                    left: "0%",
+                    duration: 2,
+                    ease: "power3.inOut"
+                })
+                .from('footer', {
+                    opacity: 0,
+                    duration: 1.5,
+                    left: "20%",
+                    ease: "power3.inOut"
+                }, "-=1.5")
+                .from('.hire-form', {
+                    opacity: 0,
+                    top: "80%",
+                    duration: 2,
+                    ease: "power1.inOut"
+                }, "-=1")
+        }
+    }
 });

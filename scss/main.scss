@@ -2,6 +2,7 @@
 @import 'home';
 @import 'work';
 @import 'about';
+@import 'hire';
 
 @import 'mixins';
 @import 'variables';
@@ -24,4 +25,17 @@ li {
 
 a {
     text-decoration: none;
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    background: $main-purple;
+    border: 1px solid white;
+    
+}
+
+.fp-responsive #about,
+.fp-responsive #work .fp-slide,
+.fp-responsive #home .fp-tableCell{
+    height: auto !important;
 }

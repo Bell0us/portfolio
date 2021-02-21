@@ -16,11 +16,10 @@
     padding: 0 em(30);
 
     display: grid;
-    grid-template-rows: 1.7fr 2.2fr 2fr;    
+    grid-template-rows: 1.7fr 2.2fr;    
     grid-template-areas: 
         "about-me"
-        "heading"
-        "scroll";
+        "heading";
 
     .content {
         grid-area: about-me;
@@ -90,12 +89,11 @@
         }
     }
 
-    .scroll-action {
-        grid-area: scroll; 
-        
+    .scroll-action {        
         position: absolute;
 
         left: 50%;
+        bottom: 18%;
         transform: translateX(-50%);
 
         .scroll-text {
