@@ -195,16 +195,18 @@
     }
 
     .overlap-background {
-        z-index: 2;
-
-        width: 100%;
-
-        position: relative;
-        bottom: 10%;
+        display: none;
     }
 
     .overlap-background-tablet {
-        visibility: hidden;
+        visibility: visible;
+
+        position: absolute;
+
+        left: 0;
+        bottom: em(-30);
+
+        z-index: 2;
     }
 }
 
@@ -214,10 +216,10 @@
     justify-content: center;
     gap: 20px;
 
-    position: relative;
+    position: absolute;
     z-index: 3;
 
-    bottom: 12%;
+    bottom: 15%;
     transform: translateY(-12%);
 
     width: 100%;
@@ -264,9 +266,9 @@
         }
 
         .overlap-background-tablet {
-            visibility: visible;
 
             position: absolute;
+            width: 100%;
             left: 0;
             bottom: 0;
 
