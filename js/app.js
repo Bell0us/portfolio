@@ -82,24 +82,51 @@ var tl = gsap.timeline({
 });
 
 // home page load anim
-tl.from('.home-heading h1', {
-        opacity: 0,
-        top: "30%",
-        duration: 1.5,
-        ease: "power2.inOut"
-    })
-    .from('.content', {
-        opacity: 0,
-        bottom: "60%",
-        duration: 1.5,
-        ease: "power2.inOut",
-    }, '-=1.2')
-    .from('.scroll-action', {
-        opacity: 0,
-        duration: 1,
-        bottom: "10%",
-        ease: "power1.inOut"
-    }, "-=0.5");
+if (window.innerWidth * window.devicePixelRatio <= 1194) {
+    tl.from('.home-heading h1', {
+            opacity: 0,
+            top: "30%",
+            duration: 1.5,
+            ease: "power2.inOut"
+        })
+        .from('.content', {
+            opacity: 0,
+            bottom: "60%",
+            duration: 1.5,
+            ease: "power2.inOut",
+        }, '-=1.2')
+        .from('.scroll-action', {
+            opacity: 0,
+            duration: 1,
+            bottom: "10%",
+            ease: "power1.inOut"
+        }, "-=0.5");
+}
+
+/* JavaScript Media Queries */
+if (window.innerWidth * window.devicePixelRatio >= 1194) {
+    console.log('yay');
+
+    // Home page
+    tl.from('.home-heading h1', {
+            opacity: 0,
+            right: "10%",
+            duration: 1.5,
+            ease: "power2.inOut"
+        })
+        .from('.content', {
+            opacity: 0,
+            left: "10%",
+            duration: 1.5,
+            ease: "power2.inOut",
+        }, '-=1.2')
+        .from('.scroll-action', {
+            opacity: 0,
+            duration: 1,
+            bottom: "10%",
+            ease: "power1.inOut"
+        }, "-=0.5");
+}
 
 
 new fullpage('#fullpage', {
@@ -108,86 +135,151 @@ new fullpage('#fullpage', {
     onLeave: (origin, destination, direction) => {
         const section = destination.item;
 
-        // Home page
-        if (destination.index === 0) {
 
-            tl.from('.home-heading h1', {
-                    opacity: 0,
-                    top: "30%",
-                    duration: 1.5,
-                    ease: "power2.inOut"
-                })
-                .from('.content', {
-                    opacity: 0,
-                    top: "30%",
-                    duration: 1.5,
-                    ease: "power1.inOut",
-                }, '-=1.2')
-                .from('.scroll-action', {
-                    opacity: 0,
-                    duration: 1,
-                    top: "80%",
-                    ease: "power3.inOut"
-                });
-        };
+        /* Mobile = less than 1194 */
+        if (window.innerWidth * window.devicePixelRatio <= 1194) {
 
-        // Work page
-        if (destination.index === 1) {
-            tl.from('.work-heading', {
-                    opacity: 0,
-                    top: "40%",
-                    duration: 1.5,
-                    ease: "power2.inOut"
-                })
-                .from('.show-more-button', {
-                    opacity: 0,
-                    duration: .5,
-                    ease: "power1.inOut"
-                })
-        };
+            // Home page
+            if (destination.index === 0) {
 
-        // About page
-        if (destination.index === 2) {
-            tl.from('.about-heading', {
-                    opacity: 0,
-                    left: "20%",
-                    duration: 2,
-                    ease: "power3.inOut"
-                })
-                .from('.learn-more-button', {
-                    opacity: 0,
-                    right: "20%",
-                    duration: 2,
-                    ease: "power3.inOut"
-                }, "-=2")
-                .from('.about-cards-holder', {
-                    opacity: 0,
-                    top: "150%",
-                    duration: 2,
-                    ease: "power3.inOut"
-                }, "-=1.5")
+                tl.from('.home-heading h1', {
+                        opacity: 0,
+                        top: "30%",
+                        duration: 1.5,
+                        ease: "power2.inOut"
+                    })
+                    .from('.content', {
+                        opacity: 0,
+                        top: "30%",
+                        duration: 1.5,
+                        ease: "power1.inOut",
+                    }, '-=1.2')
+                    .from('.scroll-action', {
+                        opacity: 0,
+                        duration: 1,
+                        top: "80%",
+                        ease: "power3.inOut"
+                    });
+            };
+
+            // Work page
+            if (destination.index === 1) {
+                tl.from('.work-heading', {
+                        opacity: 0,
+                        right: "20%",
+                        duration: 1.5,
+                        ease: "power2.inOut"
+                    })
+                    .from('.show-more-button', {
+                        opacity: 0,
+                        duration: .5,
+                        ease: "power1.inOut"
+                    }, "-=1")
+            };
+
+            // About page
+            if (destination.index === 2) {
+                tl.from('.about-heading', {
+                        opacity: 0,
+                        right: "20%",
+                        duration: 2,
+                        ease: "power3.inOut"
+                    })
+                    .from('.learn-more-button', {
+                        opacity: 0,
+                        left: "20%",
+                        duration: 2,
+                        ease: "power3.inOut"
+                    }, "-=2")
+                    .from('.overlap-background', {
+                        opacity: 0,
+                        duration: 2,
+                        ease: "power4.inOut"
+                    }, "-=2")
+                    .from('.about-cards-holder', {
+                        opacity: 0,
+                        top: "150%",
+                        duration: 2,
+                        ease: "power3.inOut"
+                    }, "-=1.5")
+                    .from('.switchers', {
+                        opacity: 0,
+                        top: "150%",
+                        duration: 2,
+                        ease: "power3.inOut"
+                    }, "-=2")
+            }
+
+            // Hire page
+            if (destination.index === 3) {
+                tl.from('.hire-heading', {
+                        opacity: 0,
+                        left: "0%",
+                        duration: 2,
+                        ease: "power3.inOut"
+                    })
+                    .from('footer', {
+                        opacity: 0,
+                        duration: 1.5,
+                        left: "20%",
+                        ease: "power3.inOut"
+                    }, "-=1.5")
+                    .from('.hire-form', {
+                        opacity: 0,
+                        top: "80%",
+                        duration: 2,
+                        ease: "power1.inOut"
+                    }, "-=1")
+            }
         }
 
-        // Hire page
-        if (destination.index === 3) {
-            tl.from('.hire-heading', {
-                    opacity: 0,
-                    left: "0%",
-                    duration: 2,
-                    ease: "power3.inOut"
-                })
-                .from('footer', {
-                    opacity: 0,
-                    duration: 1.5,
-                    left: "20%",
-                    ease: "power3.inOut"
-                }, "-=1.5")
-                .from('.hire-form', {
-                    opacity: 0,
-                    top: "80%",
-                    duration: 2,
-                    ease: "power1.inOut"
-                }, "-=1")
+        /* Tablet = more than 1194px */
+        if (window.innerWidth * window.devicePixelRatio >= 1194) {
+
+            // Home page
+            if (destination.index === 0) {
+
+                tl.from('.home-heading h1', {
+                        opacity: 0,
+                        right: "10%",
+                        duration: 1.5,
+                        ease: "power2.inOut"
+                    })
+                    .from('.content', {
+                        opacity: 0,
+                        left: "10%",
+                        duration: 1.5,
+                        ease: "power1.inOut",
+                    }, '-=1.2')
+                    .from('.scroll-action', {
+                        opacity: 0,
+                        duration: 1,
+                        top: "80%",
+                        ease: "power3.inOut"
+                    });
+            };
+
+            // Work page
+            if (destination.index === 1) {
+                tl.from('.work-heading', {
+                        opacity: 0,
+                        right: "20%",
+                        duration: 1.5,
+                        ease: "power2.inOut"
+                    })
+                    .from('.show-more-button', {
+                        opacity: 0,
+                        duration: .5,
+                        ease: "power1.inOut"
+                    }, "-=1")
+                    .from('.laptop', {
+                        opacity: 0,
+                        left: "20%",
+                        duration: 1.5,
+                        ease: "power2.inOut"
+                    }, "-=1")
+            };
         }
+
     }
 });

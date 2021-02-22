@@ -11,40 +11,47 @@
     
     position: relative;
 
+    text-align: center;
+
     overflow: hidden;
 
-    display: grid;
-    grid-template-rows: 2fr 1fr 1fr;
-    grid-template-areas: 
-        "work-heading"
-        "site-showcase"
-        "show-more";
+    .work-container {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .work-content {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 20px;
+    }
     
     .work-heading {
-        grid-area: work-heading;
 
         font-size: em(35);
-        align-self: center;
 
         color: $main-font-color;
 
-        position: absolute;
+        max-width: 80%;
 
-        top: 25%;
-        transform: translateY(-25%);
+        margin-right: auto;
+        margin-left: auto;
+
+        position: relative;
+
     }
 
     .site-showcase {
-        grid-area: site-showcase;  
-        
+        margin-bottom: em(150);
+
         display: flex;
         place-content: center;
         
         .laptop {            
             position: absolute;
 
-            top: 62%;
-            transform: translateY(-62%);
         }
     }
 
@@ -52,11 +59,10 @@
         font-size: em(17);
         font-weight: $bold;
         
-        grid-area: show-more;
         justify-self: center;
-        align-self: center;   
+        align-self: center; 
         
-        margin-bottom: em(80,17);
+        margin-bottom: em(80,17);        
         padding: em(15,17) em(20,17);
 
         background-color: $main-blue;
@@ -66,7 +72,46 @@
 
         position: relative;
 
-        top: 82%;
-       transform: translateY(-82%);
+    }
+}
+
+@media screen and (min-width: 1194px) {
+    #work {
+        background-image: url(../img/work-bg-tablet2.svg);
+
+        .work-container {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+
+            gap: em(10);
+        }
+
+        .site-showcase {
+            margin: 0;
+    
+            display: flex;
+            
+            .laptop {            
+                position: relative;
+                
+                width: 627px;
+                height: auto;
+            }
+        }
+
+        .work-content {
+            gap: em(20);
+
+            .show-more-button {
+                margin: 0 em(-250) em(40) 0;                
+            }          
+            
+            .work-heading {
+                font-size: em(50);
+                text-align: right;
+            }
+        }
     }
 }
