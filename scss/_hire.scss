@@ -5,10 +5,10 @@
     background-image: url(../img/hire-bg.svg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center; 
+    background-position: center center;
 
     position: relative;
-    
+
     overflow: hidden;
 
     height: 100vh;
@@ -16,8 +16,8 @@
     padding: 0;
 
     display: grid;
-    grid-template-rows: 2fr 2fr .2fr;    
-    grid-template-areas: 
+    grid-template-rows: 2fr 2fr .2fr;
+    grid-template-areas:
         "hire-heading"
         "hire-form"
         "footer";
@@ -28,7 +28,7 @@
         font-size: em(22);
         text-align: left;
 
-        max-width: 70%;      
+        max-width: 70%;
 
         color: $main-font-color;
 
@@ -51,7 +51,7 @@
         text-align: center;
 
         position: relative;
-        top: 45%;        
+        top: 45%;
 
         .contact-heading {
             color: $contrast-font-color;
@@ -67,13 +67,13 @@
 
         #name {
             font-size: em(12);
-            
+
 
             width: 90%;
             background-color: $imput-color;
 
             color: $contrast-font-color;
-            
+
             border: none;
             border-radius: em(6);
 
@@ -88,13 +88,13 @@
 
         #email {
             font-size: em(12);
-            
+
 
             width: 90%;
             background-color: $imput-color;
 
             color: $contrast-font-color;
-            
+
             border: none;
             border-radius: em(6);
 
@@ -109,13 +109,13 @@
 
         #subject {
             font-size: em(12);
-            
+
 
             width: 90%;
             background-color: $imput-color;
 
             color: $contrast-font-color;
-            
+
             border: none;
             border-radius: em(6);
 
@@ -130,13 +130,13 @@
 
         #message {
             font-size: em(12);
-            
+
 
             width: 90%;
             background-color: $imput-color;
 
             color: $contrast-font-color;
-            
+
             border: none;
             border-radius: em(6);
 
@@ -159,7 +159,7 @@
             font-size: em(16);
             font-weight: $bold;
 
-            padding: em(6,16) em(20,16);
+            padding: em(6, 16) em(20, 16);
 
             &:focus,
             &:hover {
@@ -184,12 +184,12 @@
         z-index: 10;
 
         background-color: $main-blue;
-        
+
         position: absolute;
-        bottom: 20.6%;        
+        bottom: 20.6%;
 
         .rights {
-            margin-left: em(20,10);
+            margin-left: em(20, 10);
 
             color: $contrast-font-color;
             font-size: em(10);
@@ -212,5 +212,77 @@
                 height: auto;
             }
         }
+    }
+}
+
+@media screen and (min-width: 1194px) {
+    #hire {
+        background-image: url(../img/hire-bg-tablet.svg);
+
+        .hire-form {
+            max-width: em(450);
+            margin-left: auto;
+            margin-right: em(60);
+
+            top: 25%;
+
+            .contact-heading {
+                font-size: em(40);
+            }
+
+            ::placeholder {
+                font-size: em(20);
+            }
+
+            #name,
+            #email,
+            #subject,
+            #message {
+                margin-bottom: em(12);
+                padding: em(15) 0 em(15) em(20);
+
+                font-size: em(15);
+            }
+
+            .send {
+                margin-bottom: em(60);
+            }
+        }
+
+        .hire-heading {
+            font-size: em(32);
+
+            max-width: 40%;
+
+            top: 30%;
+        }
+
+        footer {
+            height: 6vh;
+
+            .socials {
+                gap: em(25);
+
+                margin-right: em(30);
+
+                img {
+                    width: em(16);
+                    height: auto;
+                }
+            }
+
+            .rights {
+                margin-left: em(20, 10);
+
+                color: $contrast-font-color;
+                font-size: em(12);
+
+                img {
+                    width: em(14);
+                    height: auto;
+                }
+            }
+        }
+
     }
 }
