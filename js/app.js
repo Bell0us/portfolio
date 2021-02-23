@@ -200,6 +200,12 @@ new fullpage('#fullpage', {
                         duration: .5,
                         ease: "power1.inOut"
                     }, "-=1")
+                    .from('.laptop', {
+                        opacity: 0,
+                        top: "80%",
+                        duration: 1.5,
+                        ease: "power2.inOut"
+                    }, "-=1.5")
             };
 
             // About page
@@ -222,7 +228,6 @@ new fullpage('#fullpage', {
                         ease: "power4.inOut"
                     }, "-=2")
                     .from('.about-cards-holder', {
-                        opacity: 0,
                         top: "150%",
                         duration: 2,
                         ease: "power3.inOut"
@@ -250,8 +255,7 @@ new fullpage('#fullpage', {
                         ease: "power3.inOut"
                     }, "-=1.5")
                     .from('.hire-form', {
-                        opacity: 0,
-                        top: "80%",
+                        top: "100%",
                         duration: 2,
                         ease: "power1.inOut"
                     }, "-=1")
@@ -330,7 +334,6 @@ new fullpage('#fullpage', {
                         ease: "power4.inOut"
                     }, "-=2")
                     .from('.about-cards-holder', {
-                        opacity: 0,
                         top: "150%",
                         duration: 2,
                         ease: "power3.inOut"
@@ -358,8 +361,7 @@ new fullpage('#fullpage', {
                         ease: "power3.inOut"
                     }, "-=1.5")
                     .from('.hire-form', {
-                        opacity: 0,
-                        top: "80%",
+                        top: "100%",
                         duration: 2,
                         ease: "power1.inOut"
                     }, "-=1")
@@ -437,7 +439,6 @@ new fullpage('#fullpage', {
                         ease: "power4.inOut"
                     }, "-=2")
                     .from('.about-cards-holder', {
-                        opacity: 0,
                         top: "150%",
                         duration: 2,
                         ease: "power3.inOut"
@@ -459,8 +460,7 @@ new fullpage('#fullpage', {
                         ease: "power3.inOut"
                     }, "-=1.5")
                     .from('.hire-form', {
-                        opacity: 0,
-                        top: "80%",
+                        top: "100%",
                         duration: 2,
                         ease: "power1.inOut"
                     }, "-=1")
