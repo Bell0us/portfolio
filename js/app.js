@@ -74,8 +74,8 @@ logoSwitch.addEventListener('click', () => {
     logoCard.style.zIndex = "1";
 })
 
-// Fullpage scripts + GSAP 3
 
+// Fullpage scripts + GSAP 3
 
 var tl = gsap.timeline({
     delay: 0
@@ -83,7 +83,6 @@ var tl = gsap.timeline({
 
 // home page load anim
 if (window.innerWidth < 1194) {
-    console.log('yay');
 
     tl.from('.home-heading h1', {
             opacity: 0,
@@ -106,8 +105,33 @@ if (window.innerWidth < 1194) {
 }
 
 /* JavaScript Media Queries */
+
+//tablet
 if (window.innerWidth >= 1194 && window.innerWidth < 1920) {
-    //console.log('yay');
+    // Home page
+    tl.from('.home-heading h1', {
+            opacity: 0,
+            right: "10%",
+            duration: 1.5,
+            ease: "power2.inOut"
+        })
+        .from('.content', {
+            opacity: 0,
+            left: "10%",
+            duration: 1.5,
+            ease: "power2.inOut",
+        }, '-=1.2')
+        .from('.scroll-action', {
+            opacity: 0,
+            duration: 1,
+            bottom: "10%",
+            ease: "power1.inOut"
+        }, "-=0.5");
+}
+
+//desktop
+
+if (window.innerWidth >= 1920) {
     // Home page
     tl.from('.home-heading h1', {
             opacity: 0,
@@ -317,6 +341,107 @@ new fullpage('#fullpage', {
                         duration: 2,
                         ease: "power3.inOut"
                     }, "-=2")
+            }
+
+            // Hire page
+            if (destination.index === 3) {
+                tl.from('.hire-heading', {
+                        opacity: 0,
+                        left: "8%",
+                        duration: 2,
+                        ease: "power3.inOut"
+                    })
+                    .from('footer', {
+                        opacity: 0,
+                        duration: 1.5,
+                        left: "20%",
+                        ease: "power3.inOut"
+                    }, "-=1.5")
+                    .from('.hire-form', {
+                        opacity: 0,
+                        top: "80%",
+                        duration: 2,
+                        ease: "power1.inOut"
+                    }, "-=1")
+            }
+        }
+
+        /* Desktop */
+        if (window.innerWidth >= 1920) {
+            // Home page
+            if (destination.index === 0) {
+
+                tl.from('.home-heading h1', {
+                        opacity: 0,
+                        right: "10%",
+                        duration: 1.5,
+                        ease: "power2.inOut"
+                    })
+                    .from('.content', {
+                        opacity: 0,
+                        left: "10%",
+                        duration: 1.5,
+                        ease: "power1.inOut",
+                    }, '-=1.2')
+                    .from('.scroll-action', {
+                        opacity: 0,
+                        duration: 1,
+                        top: "80%",
+                        ease: "power3.inOut"
+                    });
+            };
+
+            // Work page
+            if (destination.index === 1) {
+                tl.from('.work-heading', {
+                        opacity: 0,
+                        right: "20%",
+                        duration: 1.5,
+                        ease: "power2.inOut"
+                    })
+                    .from('.show-more-button', {
+                        opacity: 0,
+                        duration: .5,
+                        ease: "power1.inOut"
+                    }, "-=1")
+                    .from('.laptop', {
+                        opacity: 0,
+                        left: "20%",
+                        duration: 1.5,
+                        ease: "power2.inOut"
+                    }, "-=1")
+            };
+
+            // About page
+            if (destination.index === 2) {
+                tl.from('.about-heading', {
+                        opacity: 0,
+                        right: "5%",
+                        duration: 2,
+                        ease: "power3.inOut"
+                    })
+                    .from('.purple-line-about', {
+                        opacity: 0,
+                        duration: 2,
+                        ease: "power3.inOut"
+                    }, "-=2")
+                    .from('.learn-more-button', {
+                        opacity: 0,
+                        left: "20%",
+                        duration: 2,
+                        ease: "power3.inOut"
+                    }, "-=2")
+                    .from('.overlap-background-tablet', {
+                        opacity: 0,
+                        duration: 1,
+                        ease: "power4.inOut"
+                    }, "-=2")
+                    .from('.about-cards-holder', {
+                        opacity: 0,
+                        top: "150%",
+                        duration: 2,
+                        ease: "power3.inOut"
+                    }, "-=1.5")
             }
 
             // Hire page

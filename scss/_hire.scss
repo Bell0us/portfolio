@@ -221,7 +221,7 @@
         background-image: url(../img/hire-bg-tablet.svg);
 
         .hire-form {
-            max-width: em(450);
+            width: em(450);
             margin-left: auto;
             margin-right: em(60);
 
@@ -285,5 +285,91 @@
             }
         }
 
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    #hire {
+        background-image: url(../img/hire-bg-pc.svg);
+
+        .hire-form {
+            width: em(700);
+            margin-left: auto;
+            margin-right: em(120);
+
+            top: 13%;
+
+            .contact-heading {
+                font-size: em(50);
+
+                margin-bottom: em(80, 60);
+            }
+
+            ::placeholder {
+                font-size: em(27);
+            }
+
+            #name,
+            #email,
+            #subject,
+            #message {
+                margin-bottom: em(20);
+                padding: em(30) 0 em(30) em(30);
+
+                font-size: em(15);
+            }
+
+            #name,
+            #email {
+                width: 43.2%;
+            }
+
+            #email {
+                margin-left: em(20);
+            }
+
+            .send {
+                margin-bottom: em(60, 25);
+
+                font-size: em(25);
+
+                padding: em(10, 25) em(25, 25);
+            }
+        }
+
+        .hire-heading {
+            font-size: em(50);
+
+            max-width: 40%;
+
+            top: 26%;
+        }
+
+        footer {
+            height: 6vh;
+
+            .socials {
+                gap: em(30);
+
+                margin-right: em(30);
+
+                img {
+                    width: em(25);
+                    height: auto;
+                }
+            }
+
+            .rights {
+                margin-left: em(20, 15);
+
+                color: $contrast-font-color;
+                font-size: em(15);
+
+                img {
+                    width: em(16);
+                    height: auto;
+                }
+            }
+        }
     }
 }

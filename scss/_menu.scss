@@ -65,7 +65,7 @@ nav {
     align-items: center;
     justify-content: center;
 
-    clip-path: circle(100px at 100% -20%);
+    clip-path: circle(100px at 100% -30%);
     transition: all 1.5s ease-out;
 
     pointer-events: none;
@@ -96,14 +96,14 @@ nav {
 }
 
 .open {
-    clip-path: circle(1100px at 100% -20%);
+    clip-path: circle(1500px at 100% -30%);
 
     pointer-events: all;
 }
 
 @media screen and (min-width: 1194px) {
     .open {
-        clip-path: circle(2000px at 100% -20%);
+        clip-path: circle(2500px at 100% -30%);
     }
 
     .nav-links {
@@ -120,7 +120,7 @@ nav {
 @media screen and (min-width: 1920px) {
 
     .open {
-        clip-path: circle(3000px at 100% -20%);
+        clip-path: circle(3500px at 100% -30%);
     }
 
     .logo {
