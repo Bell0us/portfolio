@@ -235,11 +235,11 @@
         background-image: url('../img/home-bg-pc.svg');
 
         .container-home {
-            gap: 0px;
-            margin-left: em(-30);
+
+            margin-left: em(-10);
 
             .content {
-                max-width: 50%;
+                max-width: 40%;
 
                 .name {
                     font-size: em(50);
@@ -266,13 +266,14 @@
                     width: em(5);
                     height: em(270);
 
+                    margin: 0;
                     margin-bottom: em(-20);
                 }
 
                 .heading {
                     width: 100%;
 
-                    margin-left: em(100, 80);
+                    margin-left: em(80, 80);
 
                     font-size: em(80);
                 }
