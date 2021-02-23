@@ -5,10 +5,10 @@
     background-image: url(../img/home-bg.svg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center; 
+    background-position: center center;
 
     position: relative;
-    
+
     overflow: hidden;
 
     height: 100vh;
@@ -16,8 +16,8 @@
     padding: 0 em(30);
 
     display: grid;
-    grid-template-rows: 1.7fr 2.2fr;    
-    grid-template-areas: 
+    grid-template-rows: 1.7fr 2.2fr;
+    grid-template-areas:
         "about-me"
         "heading";
 
@@ -43,7 +43,7 @@
             font-size: em(22);
             font-weight: $regular;
 
-            margin-bottom: em(2,22);
+            margin-bottom: em(2, 22);
         }
 
         .my-job {
@@ -53,14 +53,14 @@
             font-weight: $light;
         }
     }
-    
-    .home-heading {
-        grid-area: heading; 
 
-        display: flex;   
-        flex-flow: column nowrap; 
+    .home-heading {
+        grid-area: heading;
+
+        display: flex;
+        flex-flow: column nowrap;
         justify-content: space-evenly;
-        align-items: center; 
+        align-items: center;
         gap: 5px;
 
         .purple-line {
@@ -70,7 +70,7 @@
             background-color: $main-purple;
 
             position: absolute;
-            
+
             top: 30%;
             transform: translateY(-30%);
         }
@@ -84,7 +84,7 @@
 
             margin-left: auto;
             margin-right: auto;
-            
+
             font-size: em(35);
 
             position: absolute;
@@ -94,7 +94,7 @@
         }
     }
 
-    .scroll-action {        
+    .scroll-action {
         position: absolute;
 
         left: 50%;
@@ -137,7 +137,7 @@
     }
 }
 
-@media screen and (min-width: 1194px){
+@media screen and (min-width: 1194px) {
     #home {
         background-image: url('../img/home-bg-tablet.svg');
 
@@ -163,34 +163,34 @@
 
                 .name {
                     color: $main-font-color;
-        
+
                     font-size: em(35);
                     font-weight: $regular;
-        
-                    margin-bottom: em(5,35);
+
+                    margin-bottom: em(5, 35);
                 }
-        
+
                 .my-job {
                     text-align: right;
                     color: $sub-font-color;
-        
+
                     font-size: em(20);
                     font-weight: $light;
                 }
             }
 
-            .home-heading {               
+            .home-heading {
 
-                flex-flow: row nowrap; 
+                flex-flow: row nowrap;
                 justify-content: flex-start;
-                align-items: center; 
+                align-items: center;
                 gap: 100px;
 
                 margin: 0;
                 margin-right: em(100);
 
                 width: 100%;
-                
+
                 .purple-line {
                     position: relative;
                     top: 0;
@@ -214,9 +214,10 @@
 
             }
         }
-        .scroll-action {        
+
+        .scroll-action {
             position: absolute;
-    
+
             left: 70%;
             bottom: 18%;
             transform: translateX(-70%);
@@ -229,3 +230,79 @@
     }
 }
 
+@media screen and (min-width: 1920px) {
+    #home {
+        background-image: url('../img/home-bg-pc.svg');
+
+        .container-home {
+            gap: 0px;
+            margin-left: em(-30);
+
+            .content {
+                max-width: 50%;
+
+                .name {
+                    font-size: em(50);
+                    font-weight: $regular;
+
+                    margin-bottom: em(10, 45);
+                }
+
+                .my-job {
+                    font-size: em(25);
+                    font-weight: $light;
+                }
+            }
+
+            .home-heading {
+                margin-right: em(100);
+
+                max-width: 50%;
+
+                .purple-line {
+                    position: relative;
+                    top: 0;
+
+                    width: em(5);
+                    height: em(270);
+
+                    margin-bottom: em(-20);
+                }
+
+                .heading {
+                    width: 100%;
+
+                    margin-left: em(100, 80);
+
+                    font-size: em(80);
+                }
+
+            }
+        }
+
+        .scroll-action {
+            position: absolute;
+
+            left: 70%;
+            bottom: 18%;
+            transform: translateX(-70%);
+
+            .scroll-text {
+                color: $contrast-font-color;
+
+                font-size: em(30);
+                font-weight: $light;
+
+                transform: rotate(90deg);
+
+                margin-top: em(50);
+            }
+
+            svg {
+                width: em(45);
+                height: auto;
+            }
+        }
+    }
+
+}

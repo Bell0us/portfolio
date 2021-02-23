@@ -116,3 +116,39 @@ nav {
         }
     }
 }
+
+@media screen and (min-width: 1920px) {
+
+    .open {
+        clip-path: circle(3000px at 100% -20%);
+    }
+
+    .logo {
+        width: 80px;
+        height: auto;
+    }
+
+    nav {
+        .menu-mobile {
+
+            .hire-button {
+
+                font-size: em(20);
+
+                letter-spacing: em(1, 20);
+
+                padding: em(8, 20) em(13, 20);
+                margin-right: em(25, 20);
+
+                border-radius: em(5, 20);
+            }
+
+            .menu-badge {
+                cursor: pointer;
+
+                width: 60px;
+                height: auto;
+            }
+        }
+    }
+}

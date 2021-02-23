@@ -7,8 +7,8 @@
     background-position: center center;
     background-size: cover;
 
-    height: 100vh;  
-    
+    height: 100vh;
+
     position: relative;
 
     text-align: center;
@@ -27,7 +27,7 @@
         flex-flow: column nowrap;
         gap: 20px;
     }
-    
+
     .work-heading {
 
         font-size: em(35);
@@ -48,27 +48,27 @@
 
         display: flex;
         place-content: center;
-        
-        .laptop {            
+
+        .laptop {
             position: absolute;
 
         }
     }
 
-    .show-more-button {  
+    .show-more-button {
         font-size: em(17);
         font-weight: $bold;
-        
+
         justify-self: center;
-        align-self: center; 
-        
-        margin-bottom: em(80,17);        
-        padding: em(15,17) em(20,17);
+        align-self: center;
+
+        margin-bottom: em(80, 17);
+        padding: em(15, 17) em(20, 17);
 
         background-color: $main-blue;
         color: $contrast-font-color;
 
-        border-radius: em(5,17);
+        border-radius: em(5, 17);
 
         position: relative;
 
@@ -90,12 +90,12 @@
 
         .site-showcase {
             margin: 0;
-    
+
             display: flex;
-            
-            .laptop {            
+
+            .laptop {
                 position: relative;
-                
+
                 width: 627px;
                 height: auto;
             }
@@ -105,11 +105,53 @@
             gap: em(20);
 
             .show-more-button {
-                margin: 0 em(-250) em(40) 0;                
-            }          
-            
+                margin: 0 em(-250) em(40) 0;
+            }
+
             .work-heading {
                 font-size: em(50);
+                text-align: right;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    #work {
+        background-image: url(../img/work-bg-pc.svg);
+
+        .work-container {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+
+            gap: em(10);
+        }
+
+        .site-showcase {
+            margin: 0;
+
+            display: flex;
+
+            .laptop {
+                position: relative;
+
+                width: 1019px;
+                height: auto;
+            }
+        }
+
+        .work-content {
+            gap: em(20);
+
+            .show-more-button {
+                margin: 0 em(-220) em(40) 0;
+                font-size: em(30);
+            }
+
+            .work-heading {
+                font-size: em(80);
                 text-align: right;
             }
         }

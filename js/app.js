@@ -82,7 +82,9 @@ var tl = gsap.timeline({
 });
 
 // home page load anim
-if (window.innerWidth * window.devicePixelRatio <= 1194) {
+if (window.innerWidth < 1194) {
+    console.log('yay');
+
     tl.from('.home-heading h1', {
             opacity: 0,
             top: "30%",
@@ -104,9 +106,8 @@ if (window.innerWidth * window.devicePixelRatio <= 1194) {
 }
 
 /* JavaScript Media Queries */
-if (window.innerWidth * window.devicePixelRatio >= 1194) {
-    console.log('yay');
-
+if (window.innerWidth >= 1194 && window.innerWidth < 1920) {
+    //console.log('yay');
     // Home page
     tl.from('.home-heading h1', {
             opacity: 0,
@@ -137,7 +138,7 @@ new fullpage('#fullpage', {
 
 
         /* Mobile = less than 1194 */
-        if (window.innerWidth * window.devicePixelRatio < 1194) {
+        if (window.innerWidth < 1194) {
 
             // Home page
             if (destination.index === 0) {
@@ -234,7 +235,7 @@ new fullpage('#fullpage', {
         }
 
         /* Tablet = more than 1194px */
-        if (window.innerWidth * window.devicePixelRatio >= 1194) {
+        if (window.innerWidth >= 1194 && window.innerWidth < 1920) {
 
             // Home page
             if (destination.index === 0) {
