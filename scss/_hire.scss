@@ -2,7 +2,7 @@
 @import 'variables';
 
 #hire {
-    background-image: url(../img/hire-bg.svg);
+    background-image: url(../img/hire-bg-mobile.svg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -25,17 +25,19 @@
     .hire-heading {
         grid-area: hire-heading;
 
-        font-size: em(22);
+        font-size: em(25);
         text-align: left;
 
+        margin: auto;
         max-width: 70%;
+        padding-left: em(20, 25);
+
+        border-left: 3px solid $main-purple;
 
         color: $main-font-color;
 
         position: relative;
-
-        top: 25%;
-        left: 15%;
+        top: 20%;
     }
 
     .hire-form {

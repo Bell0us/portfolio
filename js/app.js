@@ -162,7 +162,7 @@ new fullpage('#fullpage', {
 
 
         /* Mobile = less than 1194 */
-        if (window.innerWidth < 1194) {
+        if (window.innerWidth >= 0 && window.innerWidth < 1194) {
 
             // Home page
             if (destination.index === 0) {
@@ -239,7 +239,7 @@ new fullpage('#fullpage', {
             if (destination.index === 3) {
                 tl.from('.hire-heading', {
                         opacity: 0,
-                        left: "0%",
+                        right: "15%",
                         duration: 2,
                         ease: "power3.inOut"
                     })

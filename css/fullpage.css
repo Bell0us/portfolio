@@ -137,7 +137,7 @@ html.fp-enabled,
     display: block;
     width: 14px;
     height: 13px;
-    margin: 7px;
+    margin: 8px 4px;
     position:relative;
 }
 .fp-slidesNav ul li {
