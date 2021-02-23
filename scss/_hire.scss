@@ -381,3 +381,65 @@
         }
     }
 }
+
+/* 
+    *
+    * Heights
+    *
+*/
+
+@media screen and (max-height: 800px) {
+    #hire {
+        .hire-form {
+            top: 30%;
+        }
+    }
+}
+
+@media screen and (max-height: 749px) {
+    #hire {
+        .hire-form {
+            top: 25%;
+        }
+    }
+}
+
+@media screen and (max-height: 699px) {
+    #hire {
+        .hire-form {
+            top: 23%;
+        }
+
+        .hire-heading {
+            top: 15%;
+        }
+    }
+}
+
+@media screen and (max-height: 674px) {
+    #hire {
+        font-size: em(14);
+
+        .hire-form {
+            top: 25%;
+        }
+
+        .hire-heading {
+            top: 15%;
+        }
+    }
+}
+
+@media screen and (max-height: 624px) {
+    #hire {
+        font-size: em(14);
+
+        .hire-form {
+            top: 22%;
+        }
+
+        .hire-heading {
+            top: 15%;
+        }
+    }
+}
