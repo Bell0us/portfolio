@@ -443,3 +443,31 @@
         }
     }
 }
+
+@media screen and (max-height: 600px) {
+    #hire {
+        font-size: em(13);
+
+        .hire-form {
+            top: 32%;
+
+            #name,
+            #email {
+                width: 44%;
+            }
+        }
+
+        .hire-heading {
+            top: 15%;
+        }
+    }
+}
+
+
+@media screen and (max-height: 570px) {
+    #hire {
+        .hire-form {
+            top: 30%;
+        }
+    }
+}
