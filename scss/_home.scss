@@ -351,6 +351,20 @@
     }
 }
 
+@media screen and (min-width: 1450px) {
+    #home {
+        .container-home {
+            gap: 100px;
+
+            .home-heading {
+                .heading {
+                    font-size: em(45);
+                }
+            }
+        }
+    }
+}
+
 
 @media screen and (min-width: 1600px) {
     #home {
