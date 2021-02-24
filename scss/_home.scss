@@ -348,6 +348,10 @@
 @media screen and (min-width: 1400px) {
     #home {
         background-image: url('../img/home-bg-1400.svg');
+
+        .container-home {
+            height: 80%;
+        }
     }
 }
 
