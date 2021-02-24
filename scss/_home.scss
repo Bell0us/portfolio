@@ -126,12 +126,12 @@
         }
 
         .scroll-circle {
-            animation: circleScrollAnimMobile 1.3s infinite alternate-reverse;
+            animation: circleScrollAnim 1.3s infinite alternate-reverse;
         }
     }
 }
 
-@keyframes circleScrollAnimMobile {
+@keyframes circleScrollAnim {
     to {
         transform: translateY(20px);
     }
@@ -142,9 +142,6 @@
 *   Widths queriees
 *
 **/
-
-
-//secondary
 
 @media screen and (min-width: 600px) {
     #home {
@@ -493,12 +490,11 @@
 }
 
 
-
-
-
-
-
-
+/*
+*
+* Heights queries
+*
+*/
 
 @media screen and (max-height: 700px) {
     #home {
