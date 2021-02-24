@@ -137,7 +137,121 @@
     }
 }
 
-@media screen and (min-width: 1194px) {
+/*
+*
+*   Widths queriees
+*
+**/
+
+
+//secondary
+
+@media screen and (min-width: 600px) {
+    #home {
+        font-size: em(20);
+
+        background-image: url('../img/home-bg-600.svg');
+
+        .scroll-action {
+            bottom: 12%;
+
+            svg {
+                width: em(25);
+                height: auto;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #home {
+        background-image: url('../img/home-bg-900.svg');
+
+        .scroll-action {
+            left: 70%;
+            transform: translateX(-70%);
+        }
+
+        .container-home {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 50px;
+
+            width: 100%;
+            height: 80%;
+
+            margin-left: auto;
+            margin-right: auto;
+
+            .content {
+                text-align: right;
+                position: relative;
+                align-items: flex-end;
+
+                top: 0;
+
+                margin: 0;
+                margin-top: em(-40);
+                margin-left: em(-60);
+
+                .name {
+                    color: $main-font-color;
+
+                    font-size: em(20);
+                    font-weight: $regular;
+
+                    margin-bottom: em(5, 20);
+                }
+
+                .my-job {
+                    color: $sub-font-color;
+
+                    font-size: em(12);
+                    font-weight: $light;
+                }
+            }
+
+            .home-heading {
+
+                flex-flow: row nowrap;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 0px;
+
+                margin: 0;
+
+                width: 100%;
+
+                .purple-line {
+                    position: relative;
+                    top: 0;
+
+                    width: em(3);
+                    height: em(120);
+
+                    margin-bottom: em(-20);
+                }
+
+                .heading {
+                    text-align: left;
+
+                    position: relative;
+                    top: 0;
+
+                    width: 100%;
+
+                    font-size: em(30);
+                }
+
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1122px) {
     #home {
         background-image: url('../img/home-bg-tablet.svg');
 
@@ -146,7 +260,7 @@
             flex-flow: row nowrap;
             justify-content: space-evenly;
             align-items: center;
-            gap: 20px;
+            gap: 70px;
 
             width: 100%;
             height: 70%;
@@ -160,11 +274,12 @@
 
                 margin: 0;
                 margin-top: em(-60);
+                margin-left: em(-100);
 
                 .name {
                     color: $main-font-color;
 
-                    font-size: em(35);
+                    font-size: em(30);
                     font-weight: $regular;
 
                     margin-bottom: em(5, 35);
@@ -174,7 +289,7 @@
                     text-align: right;
                     color: $sub-font-color;
 
-                    font-size: em(20);
+                    font-size: em(16);
                     font-weight: $light;
                 }
             }
@@ -184,10 +299,9 @@
                 flex-flow: row nowrap;
                 justify-content: flex-start;
                 align-items: center;
-                gap: 100px;
+                gap: 70px;
 
                 margin: 0;
-                margin-right: em(100);
 
                 width: 100%;
 
@@ -209,7 +323,7 @@
 
                     width: 100%;
 
-                    font-size: em(50);
+                    font-size: em(40);
                 }
 
             }
@@ -230,7 +344,29 @@
     }
 }
 
-@media screen and (min-width: 1920px) {
+
+@media screen and (min-width: 1400px) {
+    #home {
+        background-image: url('../img/home-bg-1400.svg');
+    }
+}
+
+
+@media screen and (min-width: 1600px) {
+    #home {
+        .container-home {
+            gap: 100px;
+
+            .home-heading {
+                .heading {
+                    font-size: em(50);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1840px) {
     #home {
         background-image: url('../img/home-bg-pc.svg');
 
@@ -238,24 +374,27 @@
 
             margin-left: em(-10);
 
+            gap: 50px;
+
             .content {
                 max-width: 40%;
 
                 .name {
-                    font-size: em(50);
+                    font-size: em(40);
                     font-weight: $regular;
 
                     margin-bottom: em(10, 45);
                 }
 
                 .my-job {
-                    font-size: em(25);
+                    font-size: em(20);
                     font-weight: $light;
                 }
             }
 
             .home-heading {
                 margin-right: em(100);
+                gap: 0px;
 
                 max-width: 50%;
 
@@ -263,8 +402,8 @@
                     position: relative;
                     top: 0;
 
-                    width: em(5);
-                    height: em(270);
+                    width: em(4);
+                    height: em(250);
 
                     margin: 0;
                     margin-bottom: em(-20);
@@ -273,9 +412,7 @@
                 .heading {
                     width: 100%;
 
-                    margin-left: em(80, 80);
-
-                    font-size: em(80);
+                    font-size: em(60);
                 }
 
             }
@@ -306,4 +443,62 @@
         }
     }
 
+}
+
+@media screen and (min-width: 2220px) {
+    #home {
+        .container-home {
+            gap: 100px;
+
+            .content {
+
+                .name {
+                    font-size: em(50);
+                }
+
+                .my-job {
+                    font-size: em(25);
+                }
+            }
+
+            .home-heading {
+                .heading {
+                    font-size: em(80);
+                }
+
+                .purple-line {
+                    height: em(300);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-height: 700px) {
+    #home {
+        font-size: em(13);
+
+        .scroll-action {
+            bottom: 15%;
+
+            .scroll-text {
+                font-size: em(18);
+
+                margin-top: em(50);
+            }
+
+            svg {
+                width: em(25);
+                height: auto;
+            }
+        }
+    }
 }
