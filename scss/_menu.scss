@@ -102,6 +102,7 @@ nav {
 }
 
 @media screen and (min-width: 1194px) {
+
     .open {
         clip-path: circle(2500px at 100% -30%);
     }
@@ -129,6 +130,9 @@ nav {
     }
 
     nav {
+
+        height: 7vh;
+
         .menu-mobile {
 
             .hire-button {
