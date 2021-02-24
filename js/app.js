@@ -82,7 +82,7 @@ var tl = gsap.timeline({
 });
 
 // home page load anim
-if (window.innerWidth < 1194) {
+if (window.innerWidth < 900) {
 
     tl.from('.home-heading h1', {
             opacity: 0,
@@ -107,7 +107,7 @@ if (window.innerWidth < 1194) {
 /* JavaScript Media Queries */
 
 //tablet
-if (window.innerWidth >= 1194 && window.innerWidth < 1920) {
+if (window.innerWidth >= 900 && window.innerWidth < 1920) {
     // Home page
     tl.from('.home-heading h1', {
             opacity: 0,
